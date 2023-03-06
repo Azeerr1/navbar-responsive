@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="styles/style.css" >
+	<script src="scripts/script.js"></script>
+	<title>Document</title>
+</head>
+<body>
+	<header>
+		<div class="menu">
+			<div class="logo"><a href='#'>LOGO</a></div>
+			<ul class="liens">
+				<li><a href='#'>Accueil</a></li>
+				<li><a href="#presentation">Présentation</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#offres">Offres</a></li>
+			</ul>
+			<a href="#" class="btn-ds">Discord</a>
+			<div class="activer-btn">
+				<i class="fa-solid fa-bars"></i>
+			</div>
+
+
+			<div class="menu-deroulant">
+				<li><a href='#'>Accueil</a></li>
+				<li><a href="#presentation">Présentation</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#offres">Offres</a></li>
+				<li><a href="#" class="btn-ds2">Discord</a></li>
+			</div>
+
+		</div>
+	</header>
+
+	<script>
+		const ActiverBtn = document.querySelector('.activer-btn')
+		const ActiverBtnIcon = document.querySelector('.activer-btn i')
+		const MenuDeroulant = document.querySelector('.menu-deroulant')
+
+		ActiverBtn.onclick = function (){
+			MenuDeroulant.classList.toggle('ouvert')
+			const etatOuvert = MenuDeroulant.classList.contains('ouvert')
+
+			ActiverBtnIcon.classList = etatOuvert
+			? 'fa-solid fa-xmark'
+			: 'fa-solid fa-bars'
+		}
+	</script>
+
+	<main>
+		<section id="hero">
+			<h1>Bienvenue</h1>
+			<p>Page web test</p>
+		</section>
+	</main>
+
+
+
+</body>
+</html>
